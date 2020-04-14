@@ -13,7 +13,7 @@ namespace Game
         public GameObject player;
         public bool playerAlive;
 
-        private float gameTime;
+        public float gameTime;
 
         private void Awake() => Instance = this;
 

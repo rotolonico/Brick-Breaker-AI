@@ -97,6 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 9054388352104064622, guid: 5fae4cab504a42626b32d42843a943a2,
     type: 3}
+  wallPrefab: {fileID: 8396115544759169131, guid: f5291a6a9daa3745fa4f604aff73e83b,
+    type: 3}
   speed: 1
   instanceId: -1
   ball: {fileID: 0}

@@ -9,6 +9,7 @@ namespace Game
     public class PlatformController : MonoBehaviour
     {
         public GameObject ballPrefab;
+        public GameObject wallPrefab;
 
         public float speed;
         public GenomeWrapper genome;
@@ -20,15 +21,15 @@ namespace Game
 
         private void Start()
         {
-            var newBall = Instantiate(ballPrefab, new Vector3(0, 2.5f), Quaternion.identity);
+            var newBall = Instantiate(ballPrefab, new Vector3(0, -1f), Quaternion.identity);
             newBall.name = instanceId.ToString();
             ball = newBall.GetComponent<BallHandler>();
             ball.platform = this;
+
             if (isPlayer || genome.Best)
             {
                 GetComponent<SpriteRenderer>().color = Color.white;
                 ball.GetComponent<SpriteRenderer>().color = Color.white;
-                
             }
         }
 
