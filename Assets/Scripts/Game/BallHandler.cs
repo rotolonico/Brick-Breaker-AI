@@ -33,7 +33,7 @@ namespace Game
             if (Settings.Scenario != 1 && other.CompareTag("HorizontalWall") && !hitBlocks.Contains(other.name))
             {
                 rb.velocity *= newDirectionVector;
-                if (Settings.Scenario > 2 && !platform.isPlayer) platform.genome.Genome.Score += 5;
+                if (Settings.Scenario > 2 && !platform.isPlayer) platform.genome.Genome.Score += Settings.Scenario == 4 ? 10 : 5;
                 if (Settings.Scenario == 4) hitBlocks.Add(other.name);
             }
 

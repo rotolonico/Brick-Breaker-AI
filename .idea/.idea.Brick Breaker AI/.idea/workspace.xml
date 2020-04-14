@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e858de68-a696-4c13-8c1d-afe2bc95134c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ball.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platform.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlatformAI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlatformAI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/PlatformController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PlatformController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,9 +58,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/PlatformController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" />
       </list>
     </option>
   </component>
@@ -127,7 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586798316585</updated>
       <workItem from="1586798328040" duration="8229000" />
-      <workItem from="1586847666173" duration="10220000" />
+      <workItem from="1586847666173" duration="11102000" />
     </task>
     <servers />
   </component>

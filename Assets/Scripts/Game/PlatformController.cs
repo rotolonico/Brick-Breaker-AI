@@ -21,7 +21,7 @@ namespace Game
 
         private void Start()
         {
-            var newBall = Instantiate(ballPrefab, new Vector3(0, -1f), Quaternion.identity);
+            var newBall = Instantiate(ballPrefab, new Vector3(Settings.Scenario == 4 ? -2 : 0, -1f), Quaternion.identity);
             newBall.name = instanceId.ToString();
             ball = newBall.GetComponent<BallHandler>();
             ball.platform = this;
