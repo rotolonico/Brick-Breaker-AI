@@ -10,7 +10,7 @@ namespace Game
     {
         public static Settings Instance;
 
-        public static int Scenario = 1;
+        public static int Scenario = 4;
 
         public int inputs;
         public int outputs;

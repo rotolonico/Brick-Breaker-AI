@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e858de68-a696-4c13-8c1d-afe2bc95134c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/NetworkDisplayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/NetworkDisplayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/PlatformController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PlatformController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NN/NeuralNetwork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NN/NeuralNetwork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NNUtils/NetworkStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NNUtils/NetworkStorage.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +41,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/FullSerializer/fsSerializer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/BlocksHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0EDFEAA-E161-477A-B752-A75AE01CB403/88/27e1d7c9/Math.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NN/Layer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FullSerializer/Reflection/fsTypeCache.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,24 +53,25 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9D9CA785-E8F7-437C-82B3-2EC20364DFA1/5b/1a123a3c/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/PlatformController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/LiteNN/LiteNeuralNetwork.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/BoardController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/PlatformController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/BlocksHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" />
       </list>
     </option>
@@ -98,10 +110,10 @@
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="4107">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="20745">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="4107" />
+      <option name="pid" value="20745" />
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
@@ -117,7 +129,9 @@
       <option name="presentableId" value="Default" />
       <updated>1586798316585</updated>
       <workItem from="1586798328040" duration="8229000" />
-      <workItem from="1586847666173" duration="11102000" />
+      <workItem from="1586847666173" duration="11290000" />
+      <workItem from="1587226581862" duration="2140000" />
+      <workItem from="1587473268828" duration="8704000" />
     </task>
     <servers />
   </component>
@@ -131,7 +145,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -147,6 +163,19 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs</url>
+          <line>47</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs" initialLine="47">
+            <startOffsets>
+              <option value="1539" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1595" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -21,7 +21,7 @@ namespace AI.NEAT
         private const float DT = 10.0f;
         private const float WeightMutationRate = 0.5f;
         private const float AddConnectionRate = 0.5f;
-        private const float ToggleConnectionRate = 0.5f;
+        private const float ToggleConnectionRate = 0f;
         private const float AddNodeRate = 0.3f;
         private const int ConnectionMutationMaxAttempts = 10;
 
@@ -92,6 +92,7 @@ namespace AI.NEAT
         {
             species.Clear();
             HighestScore = float.MinValue;
+            FittestGenome = null;
 
             foreach (var g in Genomes)
             {
@@ -115,19 +116,20 @@ namespace AI.NEAT
                 var score = EvaluateGenome(g.Genome);
                 g.Fitness = score;
 
-                if (!(HighestScore < score)) continue;
-                HighestScore = score;
+                if (!(HighestScore <= g.Fitness)) continue;
+                HighestScore = g.Fitness;
                 if (FittestGenome != null) FittestGenome.Best = false;
                 FittestGenome = g;
                 g.Best = true;
             }
 
             species.RemoveAll(s => s.Members.Count == 0);
-
+    
             Genomes.Clear();
 
-            foreach (var speciesFitness in species.Select(s => s.CalculateSpeciesFitness()))
-                Genomes.Add(speciesFitness.BestMember);
+            foreach (var speciesFitness in species.Select(s => s.CalculateSpeciesFitness()).Where(f => !f.BestMember.Best))
+                Genomes.Add(new GenomeWrapper(new Genome(speciesFitness.BestMember.Genome)));
+            Genomes.Add(new GenomeWrapper(new Genome(FittestGenome.Genome)) {Best = true});
 
             while (Genomes.Count < populationSize)
             {
@@ -136,10 +138,10 @@ namespace AI.NEAT
                 var p1 = GetRandomGenomeInSpecies(s);
                 var p2 = GetRandomGenomeInSpecies(s);
 
-                var mostFitParent = p1.Fitness > p2.Fitness ? p1.Genome : p2.Genome;
-                var leastFitParent = p1.Fitness > p2.Fitness ? p2.Genome : p1.Genome;
+                var mostFitParent = p1.Fitness > p2.Fitness ? p1 : p2;
+                var leastFitParent = p1.Fitness > p2.Fitness ? p2 : p1;
 
-                var child = Genome.Crossover(mostFitParent, leastFitParent);
+                var child = Genome.Crossover(mostFitParent.Genome, leastFitParent.Genome);
 
                 if (RandomnessHandler.RandomZeroToOne() < WeightMutationRate) child.WeightMutation();
                 if (RandomnessHandler.RandomZeroToOne() < AddConnectionRate)
@@ -148,8 +150,8 @@ namespace AI.NEAT
                     child.ToggleConnectionMutation();
                 if (RandomnessHandler.RandomZeroToOne() < AddNodeRate)
                     child.AddNodeMutation(nodeInnovation, connectionInnovation);
-
-                Genomes.Add(new GenomeWrapper(child));
+                
+                Genomes.Add(new GenomeWrapper(child) {Fitness = leastFitParent.Fitness});
             }
         }
 

@@ -11,14 +11,17 @@ namespace IO
     {
         public static float[] GetInputs(PlatformController platform)
         {
-            var inputs = new float[5];
-            inputs[0] = (platform.transform.position.x) / 5;
+            var inputs = new float[7];
+            inputs[0] = platform.transform.position.x / 5;
             var ballPosition = platform.ball.transform.position;
             var ballVelocity = platform.ball.rb.velocity;
-            inputs[1] = (ballPosition.x) / 5;
-            inputs[2] = (ballPosition.y) / 5;
-            inputs[3] = (ballVelocity.x) / 5;
-            inputs[4] = (ballVelocity.y) / 5;
+            inputs[1] = ballPosition.x / 5;
+            inputs[2] = ballPosition.y / 5;
+            inputs[3] = ballVelocity.x / 5;
+            inputs[4] = ballVelocity.y / 5;
+            var blocksRelativePosition = BlocksHandler.Instance.GetBlocksRelativePosition(ballPosition);
+            inputs[5] = blocksRelativePosition[0];
+            inputs[6] = blocksRelativePosition[1];
 
             return inputs;
         }

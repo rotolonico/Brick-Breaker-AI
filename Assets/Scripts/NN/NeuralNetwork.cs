@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using AI.NEAT;
 using AI.NEAT.Genes;
-using UnityEngine;
-using Utils;
 
 namespace NN
 {
@@ -14,7 +11,7 @@ namespace NN
         public readonly Layer[] Layers;
         public readonly Dictionary<int, Node> GenomeNodes;
 
-        public float WeightDecay = 0.001f;
+        public float WeightDecay = 0;
         public float ClassificationOverPrecision = 1;
         public float Momentum = 0;
         public float MaxError = 0;
@@ -42,12 +39,9 @@ namespace NN
             foreach (var node in GenomeNodes)
             {
                 var inNodes = genome.Connections.Where(c => c.Value.OutNode == node.Key && c.Value.Expressed)
-                    .Select(c => c.Value.InNode).ToArray();
+                    .Select(c => new KeyValuePair<int, int>(c.Key, c.Value.InNode)).ToArray();
                 foreach (var inNode in inNodes)
-                {
-                    node.Value.weights.Add(GenomeNodes[inNode],
-                        RandomnessHandler.RandomZeroToOne() * Mathf.Sqrt(2f / inNodes.Length));
-                }
+                    node.Value.weights.Add(GenomeNodes[inNode.Value], genome.Connections[inNode.Key].Weight);
             }
         }
     }
