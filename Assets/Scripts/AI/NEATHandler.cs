@@ -23,11 +23,15 @@ namespace AI
 
         private void Start() => InitializeNetwork();
 
-        public void InitializeNetwork(Genome startingGenome = null)
+        public void InitializeNetwork(GenomeWrapper startingGenome = null)
         {
-            evaluator = new Evaluator(populationSize, new Counter(), new Counter(), g => Mathf.Pow(g.Score, 3),
-                startingGenome);
-            InitiateGeneration();
+            if (!GameHandler.Instance.useTrainedNetwork.isOn)
+            {
+                evaluator = new Evaluator(populationSize, new Counter(), new Counter(), g => Mathf.Pow(g.Score, 3),
+                    startingGenome?.Genome);
+                InitiateGeneration();
+            }
+            else InitializeGenome(startingGenome);
         }
 
         public void InitiateGeneration()
@@ -60,7 +64,7 @@ namespace AI
             newPlayerController.instanceId = 0;
             alivePopulation.Add(newPlayerAI.GetComponent<PlatformController>());
 
-            NetworkDisplayer.Instance.DisplayNetwork(genome.Genome);
+                NetworkDisplayer.Instance.DisplayNetwork(genome.Genome);
             newPlayerAI.GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
