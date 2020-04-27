@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -13,11 +14,18 @@ namespace Game
 
         private void Awake() => Instance = this;
 
-        private void Start() =>
+        private void Start() => StartCoroutine(InitializeBlocks());
+
+        public IEnumerator InitializeBlocks()
+        {
+            blocks = null;
+            yield return null;
             blocks = GameObject.FindGameObjectsWithTag("HorizontalWall").Select(g => g.transform).ToArray();
+        }
 
         public float[] GetBlocksRelativePosition(Vector2 position)
         {
+            if (blocks == null) return new[] {0f, 0f};
             var leftBlocks = blocks.Count(block => block.position.x < position.x);
             var rightBlocks = blocks.Length - leftBlocks;
             return blocks.Length != 0

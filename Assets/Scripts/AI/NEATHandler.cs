@@ -49,7 +49,7 @@ namespace AI
                 alivePopulation.Add(newPlayerAI.GetComponent<PlatformController>());
 
                 if (!genome.Best) continue;
-                NetworkDisplayer.Instance.DisplayNetwork(genome.Genome);
+                NetworkDisplayer.Instance.DisplayNetwork(genome);
                 newPlayerAI.GetComponent<SpriteRenderer>().color = Color.white;
             }
         }
@@ -64,7 +64,7 @@ namespace AI
             newPlayerController.instanceId = 0;
             alivePopulation.Add(newPlayerAI.GetComponent<PlatformController>());
 
-                NetworkDisplayer.Instance.DisplayNetwork(genome.Genome);
+                NetworkDisplayer.Instance.DisplayNetwork(genome);
             newPlayerAI.GetComponent<SpriteRenderer>().color = Color.white;
         }
     }

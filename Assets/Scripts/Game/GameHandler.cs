@@ -64,7 +64,7 @@ namespace Game
             {
                 foreach (var platformController in NEATHandler.Instance.alivePopulation.Where(platformController =>
                     platformController.ball.transform.position.y < -6))
-                    platformController.genome.Genome.Score = Math.Max(0, platformController.genome.Genome.Score - 50);
+                    platformController.genome.Genome.Score = Math.Max(0, platformController.genome.Genome.Score - 5 * generation);
                 NEATHandler.Instance.evaluator.Evaluate();
                 ResetGame();
             }

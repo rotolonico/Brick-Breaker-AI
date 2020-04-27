@@ -38,7 +38,7 @@ namespace Game
                 {
                     if (!platform.isPlayer) platform.genome.Genome.Score += 5;
                     if (platform.isPlayer || platform.genome.Best)
-                        other.GetComponent<SpriteRenderer>().color = Color.clear;
+                        other.GetComponent<SpriteRenderer>().color = new Color(0.1320784f, 1 ,0, 0.1f);
                 }
 
                 if (Settings.Scenario == 4) hitBlocks.Add(other.name);

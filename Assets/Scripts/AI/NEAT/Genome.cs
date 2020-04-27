@@ -15,7 +15,7 @@ namespace AI.NEAT
     public class Genome
     {
         private const float PerturbingProbability = 0.9f;
-        private const float PerturbingStrength = 0.01f;
+        private const float PerturbingStrength = 0.1f;
         private const float WeightStrength = 1f;
 
         public Dictionary<int, NodeGene> Nodes;

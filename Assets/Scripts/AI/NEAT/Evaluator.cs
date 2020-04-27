@@ -21,7 +21,7 @@ namespace AI.NEAT
         private const float DT = 10.0f;
         private const float WeightMutationRate = 0.5f;
         private const float AddConnectionRate = 0.5f;
-        private const float ToggleConnectionRate = 0f;
+        private const float ToggleConnectionRate = 0.3f;
         private const float AddNodeRate = 0.3f;
         private const int ConnectionMutationMaxAttempts = 10;
 

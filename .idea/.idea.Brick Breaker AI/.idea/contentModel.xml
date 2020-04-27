@@ -104,6 +104,7 @@
             <e p="GameHandler.cs" t="Include" />
             <e p="PlatformController.cs" t="Include" />
             <e p="Settings.cs" t="Include" />
+            <e p="WallSpawner.cs" t="Include" />
           </e>
           <e p="IO" t="Include">
             <e p="InputsRetriever.cs" t="Include" />
