@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using UnityEngine;
+using Utils;
 
 namespace Game
 {
@@ -9,6 +10,8 @@ namespace Game
         private Camera mainCamera;
 
         public GameObject hWall;
+
+        private int spawnedWalls;
 
         private void Start() => mainCamera = Camera.main;
 
@@ -20,12 +23,7 @@ namespace Game
                 if (!(mousePosition.x < 5.5f) || !(mousePosition.x > -5.5f) || !(mousePosition.y > -0.5f) ||
                     !(mousePosition.y < 3.5f)) return;
 
-                if (Physics2D.OverlapPointAll(mousePosition).Any(col => col.CompareTag("HorizontalWall")))
-                    return;
-
-                Instantiate(hWall, new Vector3(Mathf.Round(mousePosition.x), Mathf.Round(mousePosition.y), 0),
-                    Quaternion.identity);
-                StartCoroutine(BlocksHandler.Instance.InitializeBlocks());
+                SpawnWall(mousePosition);
             }
             else if (Input.GetMouseButtonDown(1))
             {
@@ -33,12 +31,24 @@ namespace Game
                 if (!(mousePosition.x < 5.5f) || !(mousePosition.x > -5.5f) || !(mousePosition.y > -0.5f) ||
                     !(mousePosition.y < 3.5f)) return;
 
-                foreach (var col in Physics2D.OverlapPointAll(mousePosition))
-                    if (col.CompareTag("HorizontalWall"))
-                        Destroy(col.gameObject);
-
-                StartCoroutine(BlocksHandler.Instance.InitializeBlocks());
+                DestroyWall(mousePosition);
             }
+        }
+
+        private void SpawnWall(Vector3 position)
+        {
+            if (Physics2D.OverlapPointAll(position).Any(col => col.CompareTag("HorizontalWall")))
+                return;
+
+            Instantiate(hWall, new Vector3(Mathf.Round(position.x), Mathf.Round(position.y), 0),
+                Quaternion.identity).name = spawnedWalls++.ToString();
+        }
+
+        private void DestroyWall(Vector3 position)
+        {
+            foreach (var col in Physics2D.OverlapPointAll(position))
+                if (col.CompareTag("HorizontalWall"))
+                    Destroy(col.gameObject);
         }
     }
 }

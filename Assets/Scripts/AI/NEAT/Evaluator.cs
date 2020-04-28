@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AI.NEAT.Genes;
 using Game;
+using UnityEngine;
 using Utils;
 
 namespace AI.NEAT
@@ -90,6 +91,7 @@ namespace AI.NEAT
 
         public void Evaluate()
         {
+            Debug.Log(species.Count);
             species.Clear();
             HighestScore = float.MinValue;
             FittestGenome = null;
@@ -146,8 +148,8 @@ namespace AI.NEAT
                 if (RandomnessHandler.RandomZeroToOne() < WeightMutationRate) child.WeightMutation();
                 if (RandomnessHandler.RandomZeroToOne() < AddConnectionRate)
                     child.AddConnectionMutation(connectionInnovation, ConnectionMutationMaxAttempts);
-                if (RandomnessHandler.RandomZeroToOne() < ToggleConnectionRate)
-                    child.ToggleConnectionMutation();
+//                if (RandomnessHandler.RandomZeroToOne() < ToggleConnectionRate)
+//                    child.ToggleConnectionMutation();
                 if (RandomnessHandler.RandomZeroToOne() < AddNodeRate)
                     child.AddNodeMutation(nodeInnovation, connectionInnovation);
                 

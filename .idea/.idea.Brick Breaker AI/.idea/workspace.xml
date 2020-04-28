@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e858de68-a696-4c13-8c1d-afe2bc95134c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Node.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Node.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/HWall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/HWall.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/NetworkDisplayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/NetworkDisplayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/BlocksHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/BlocksHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WallSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WallSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Genome" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Genome" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/WallSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/RandomnessHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/BlocksHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NN/Layer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" root0="FORCE_HIGHLIGHTING" />
@@ -73,16 +70,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/BoardController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/PlatformController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/WallSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/BlocksHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/WallActivator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/WallSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/PlatformController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" />
       </list>
     </option>
   </component>
@@ -120,10 +118,10 @@
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="4826">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="14419">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="4826" />
+      <option name="pid" value="14419" />
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
@@ -145,7 +143,9 @@
       <workItem from="1587550517637" duration="5982000" />
       <workItem from="1587577099700" duration="400000" />
       <workItem from="1587835808566" duration="1688000" />
-      <workItem from="1588022387973" duration="1357000" />
+      <workItem from="1588022387973" duration="1638000" />
+      <workItem from="1588063983040" duration="9946000" />
+      <workItem from="1588082148549" duration="4022000" />
     </task>
     <servers />
   </component>

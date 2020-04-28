@@ -62,9 +62,11 @@ namespace Game
             generation++;
             if (!useTrainedNetwork.isOn)
             {
-                foreach (var platformController in NEATHandler.Instance.alivePopulation.Where(platformController =>
-                    platformController.ball.transform.position.y < -6))
-                    platformController.genome.Genome.Score = Math.Max(0, platformController.genome.Genome.Score - 5 * generation);
+                if (generation > 5)
+                {
+                    foreach (var platformController in NEATHandler.Instance.alivePopulation.Where(platformController =>
+                    platformController.ball.transform.position.y < -6)) platformController.genome.Genome.Score -= platformController.ball.brokenBricks * 100;
+                }
                 NEATHandler.Instance.evaluator.Evaluate();
                 ResetGame();
             }
