@@ -91,7 +91,6 @@ namespace AI.NEAT
 
         public void Evaluate()
         {
-            Debug.Log(species.Count);
             species.Clear();
             HighestScore = float.MinValue;
             FittestGenome = null;

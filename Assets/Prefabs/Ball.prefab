@@ -135,3 +135,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 9054388352104064618}
   platform: {fileID: 0}
+  brokenBricks: 0

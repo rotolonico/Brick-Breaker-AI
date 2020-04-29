@@ -37,8 +37,9 @@ namespace Game
 
         private void SpawnWall(Vector3 position)
         {
-            if (Physics2D.OverlapPointAll(position).Any(col => col.CompareTag("HorizontalWall")))
-                return;
+            var overlappedBlocks = Physics2D.OverlapPointAll(position).Where(col => col.CompareTag("HorizontalWall"))
+                .ToArray();
+            if (overlappedBlocks.Length != 0) Destroy(overlappedBlocks[0].gameObject);
 
             Instantiate(hWall, new Vector3(Mathf.Round(position.x), Mathf.Round(position.y), 0),
                 Quaternion.identity).name = spawnedWalls++.ToString();

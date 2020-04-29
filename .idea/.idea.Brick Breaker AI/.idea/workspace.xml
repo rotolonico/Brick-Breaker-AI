@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e858de68-a696-4c13-8c1d-afe2bc95134c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Brick Breaker AI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/HWall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/HWall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ball.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/BlocksHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/BlocksHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/PlatformController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PlatformController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WallSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WallSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Genome" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Genome" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +56,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NNUtils/NetworkStorage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A09B7863-331D-4C80-BE6F-3D1733A4ACD2/49/ec790705/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Ball.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Counter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/NEAT/GenomeWrapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NN/NeuralNetwork.cs" root0="FORCE_HIGHLIGHTING" />
@@ -71,16 +70,16 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/BoardController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/BlocksHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/WallActivator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/WallSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Genome.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEATHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/PlatformController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/NEAT/Evaluator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/IO/InputsRetriever.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/WallSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/BallHandler.cs" />
       </list>
     </option>
   </component>
@@ -118,10 +117,10 @@
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="14419">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="16220">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="14419" />
+      <option name="pid" value="16220" />
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
@@ -145,7 +144,9 @@
       <workItem from="1587835808566" duration="1688000" />
       <workItem from="1588022387973" duration="1638000" />
       <workItem from="1588063983040" duration="9946000" />
-      <workItem from="1588082148549" duration="4022000" />
+      <workItem from="1588082148549" duration="4622000" />
+      <workItem from="1588172472621" duration="1833000" />
+      <workItem from="1588174613608" duration="873000" />
     </task>
     <servers />
   </component>
@@ -177,6 +178,19 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs</url>
+          <line>99</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Game/GameHandler.cs" initialLine="95">
+            <startOffsets>
+              <option value="3092" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3118" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -28,6 +28,8 @@ namespace Game
         private bool genomeDownloaded;
         private GenomeWrapper trainedGenome;
 
+        public static bool initialized;
+
         private void Awake() => Instance = this;
 
         private void Start()
@@ -46,11 +48,21 @@ namespace Game
                 {
                     trainedGenome = new GenomeWrapper(new Genome(downloadedGenome));
                     genomeDownloaded = true;
+                    
+                    if (initialized) return;
+                    useTrainedNetwork.SetIsOnWithoutNotify(true);
+                    SwitchNetwork();
+                    initialized = true;
                 }, Debug.Log);
             else
             {
                 trainedGenome = new GenomeWrapper(new Genome(NetworkStorage.LoadGenome(genomePath)));
                 genomeDownloaded = true;
+                
+                if (initialized) return;
+                useTrainedNetwork.SetIsOnWithoutNotify(true);
+                SwitchNetwork();
+                initialized = true;
             }
         }
 

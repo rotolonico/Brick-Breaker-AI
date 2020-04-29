@@ -28,8 +28,9 @@ namespace Game
 
             if (isPlayer || genome.Best)
             {
-                GetComponent<SpriteRenderer>().color = Color.white;
-                ball.GetComponent<SpriteRenderer>().color = Color.white;
+                var platformSpriteRenderer = GetComponent<SpriteRenderer>();
+                ball.GetComponent<SpriteRenderer>().color = platformSpriteRenderer.color;
+                platformSpriteRenderer.color = Color.white;
             }
         }
 
